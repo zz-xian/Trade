@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/common_layout"
+    android:clipToPadding="true"
+    tools:context=".mvp.view.activity.own.MyPublishActivity">
+
+    <RelativeLayout
+        style="@style/common_top"
+        android:id="@+id/my_publish_top">
+        <ImageView
+            style="@style/common_back"
+            android:id="@+id/my_publish_back" />
+        <TextView
+            style="@style/common_title"
+            android:text="@string/str_my_publish" />
+        <TextView
+            style="@style/common_text"
+            android:visibility="visible"
+            android:id="@+id/my_publish_manager"
+            android:text="@string/str_manager" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/my_publish_top"
+        android:layout_above="@+id/manager_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:visibility="visible"
+            android:id="@+id/my_publish_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/colorView"
+            android:dividerHeight="0.5dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        style="@style/manager_layout"
+        android:visibility="gone"
+        android:id="@+id/manager_layout">
+        <CheckBox
+            style="@style/manager_layout_checkbox"
+            android:id="@+id/all_check"
+            android:text="  全选"/>
+        <TextView
+            style="@style/manager_layout_text"
+            android:id="@+id/delete_text"
+            android:text="@string/str_delete" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/my_publish_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <TextView
+            style="@style/common_error"
+            android:id="@+id/tv_error"
+            android:text="@string/str_no_publish" />
+    </LinearLayout>
+</RelativeLayout>

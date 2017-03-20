@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/search_bar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorTop">
+        <ImageView
+            style="@style/common_back"
+            android:id="@+id/search_back" />
+        <!--imeOptions:输入法软键盘右下角图标变化，需添加相应监听-->
+        <EditText
+            android:layout_toRightOf="@+id/search_back"
+            android:id="@+id/search_content"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:hint="@string/str_search"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:background="@drawable/round_btn_bg" />
+        <ImageView
+            android:layout_alignRight="@id/search_content"
+            android:visibility="gone"
+            android:id="@+id/clear_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@mipmap/ic_search_clear" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_below="@id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/search_history"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/str_search_history"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorGray" />
+                <ImageView
+                    android:id="@+id/clear_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@mipmap/ic_clear" />
+            </RelativeLayout>
+            <ListView
+                style="@style/common_list"
+                android:id="@+id/history_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/colorView"
+                android:dividerHeight="0.5dp"
+                android:listSelector="@drawable/list_item_selector">
+            </ListView>
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/search_result"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/str_search_result"
+                android:textSize="14sp"
+                android:textColor="@color/colorGray" />
+            <ListView
+                style="@style/common_list"
+                android:id="@+id/result_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/colorView"
+                android:dividerHeight="0.5dp"
+                android:listSelector="@drawable/list_item_selector" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

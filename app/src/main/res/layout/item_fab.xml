@@ -1,0 +1,46 @@
+<com.lzp.floatingactionbuttonplus.FloatingActionButtonPlus
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:switchFabIcon="@mipmap/ic_add"
+    app:switchFabColor="@color/colorTop"
+    app:layout_behavior="com.lzp.floatingactionbuttonplus.FabBehavior">
+
+    <com.lzp.floatingactionbuttonplus.FabTagLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tagText="联系卖家">
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_call"
+            app:fabSize="mini"
+            app:backgroundTint="@color/colorTop" />
+    </com.lzp.floatingactionbuttonplus.FabTagLayout>
+
+    <com.lzp.floatingactionbuttonplus.FabTagLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tagText="收藏商品">
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_collect"
+            app:fabSize="mini"
+            app:backgroundTint="@color/colorTop" />
+    </com.lzp.floatingactionbuttonplus.FabTagLayout>
+
+    <com.lzp.floatingactionbuttonplus.FabTagLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tagText="求购商品">
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_cart"
+            app:fabSize="mini"
+            app:backgroundTint="@color/colorTop" />
+    </com.lzp.floatingactionbuttonplus.FabTagLayout>
+</com.lzp.floatingactionbuttonplus.FloatingActionButtonPlus>

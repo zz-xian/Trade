@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xiaoxian.trade">
+
+    <!-- Bmob权限 -->
+    <!-- 允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 保持CPU运转(屏幕和键盘灯可能关闭)，用于文件上传、下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 获取wifi网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取移动网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取sd卡读写权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 推送权限 -->
+    <!-- 允许读取手机状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许接收屏幕解锁广播 -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <!-- 允许接收开机广播 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 百度地图权限 -->
+    <!-- 进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 获取wifi获取权限，wifi信息用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 修改设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!-- 其他权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 备用权限 -->
+    <uses-permission android:name="android.permission.REAL_GET_TASKS" />
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".mvp.view.activity.SplashActivity" android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mvp.view.activity.MainActivity" android:label="@string/app_name"/>
+        <activity android:name=".mvp.view.activity.RegisterActivity" />
+        <activity android:name=".mvp.view.activity.ForgetActivity" />
+        <activity android:name=".mvp.view.activity.LoginActivity" />
+        <activity android:name=".mvp.view.activity.PublishActivity" />
+        <activity android:name=".mvp.view.activity.KindActivity" />
+        <activity android:name=".mvp.view.activity.SubKindActivity" />
+        <activity android:name=".mvp.view.activity.AllKindActivity" />
+        <activity android:name=".mvp.view.activity.SearchActivity" />
+        <activity android:name=".mvp.view.activity.ResultActivity" />
+        <activity android:name=".mvp.view.activity.DetailActivity" />
+        <activity android:name=".mvp.view.activity.ProfileActivity" />
+        <activity android:name=".mvp.view.activity.SettingActivity" />
+        <activity android:name=".mvp.view.activity.galley.AlbumActivity" />
+        <activity android:name=".mvp.view.activity.galley.FolderActivity" />
+        <activity android:name=".mvp.view.activity.galley.PhotoActivity" />
+        <activity android:name=".mvp.view.activity.setting.AboutMeActivity" />
+        <activity android:name=".mvp.view.activity.setting.AboutAppActivity" />
+        <activity android:name=".mvp.view.activity.setting.FeedBackActivity" />
+        <activity android:name=".mvp.view.activity.setting.ModifyPassActivity" />
+        <activity android:name=".mvp.view.activity.own.MyPublishActivity" />
+        <activity android:name=".mvp.view.activity.own.MyCollectActivity" />
+        <activity android:name=".mvp.view.activity.own.MyCartActivity" />
+
+        <!-- 百度定位 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="SlkjOnhr3UndIuW0TNrrznHUWHcQUVb0" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true" android:process=":remote" />
+        <!-- 友盟三方 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58491ed1f29d9828c3000782" />
+        <!-- 新浪微博 -->
+        <activity
+            android:name=".WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <!-- 爆红正常，不会影响编译 -->
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false" />
+    </application>
+</manifest>

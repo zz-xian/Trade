@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+    
+    <RelativeLayout
+        style="@style/common_top"
+        android:id="@+id/all_kind_top">
+        <ImageView
+            style="@style/common_back"
+            android:id="@+id/all_kind_back" />
+        <TextView
+            style="@style/common_title"
+            android:id="@+id/all_kind_text"
+            android:text="@string/str_all_kind_text" />
+        <TextView
+            style="@style/common_text"
+            android:id="@+id/all_kind_finish"
+            android:text="@string/str_finish" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/lv_kind"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:divider="@color/colorView"
+            android:dividerHeight="0.5dp"
+            android:background="@color/colorBackground" />
+        <ListView
+            android:id="@+id/lv_sub_kind"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:divider="@color/colorView"
+            android:dividerHeight="0.5dp"
+            android:background="@color/colorWhite" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        style="@style/common_top"
+        android:id="@+id/photo_top"
+        android:gravity="center_vertical">
+        <Button
+            android:id="@+id/photo_cancel"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/str_cancel"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"
+            android:background="@null" />
+        <TextView
+            android:id="@+id/photo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:maxLines="1"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite" />
+        <Button
+            android:id="@+id/photo_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:background="@null" />
+    </RelativeLayout>
+
+    <GridView
+        android:layout_below="@id/photo_top"
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:verticalSpacing="2dp"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:background="@color/colorBackground" />
+</RelativeLayout>

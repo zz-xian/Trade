@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自定义颜色 -->
+    <color name="colorTop">#00B8FF</color>
+    <color name="colorGray">#999999</color>
+    <color name="colorView">#DDDDDD</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#222222</color>
+    <color name="colorButton">#288DBB</color>
+    <color name="colorToast">#88000000</color>
+    <color name="colorBackground">#EEEEEE</color>
+    <color name="popupWindowTextView">#A6A6A6</color>
+    <color name="popupWindowButtonBg">#D1D1D1</color>
+    <color name="popupWindowButtonText">#2A2A2A</color>
+    <color name="goodsDetailBackground">#EEEFF2</color>
+    <color name="searchHistoryListItemNormal">#70FFFFFF</color>
+    <color name="searchHistoryListItemSelect">#0A000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="verticalView">#50666666</color>
+    <color name="selfListItem">#E2E2E2</color>
+    <color name="managerText">#30000000</color>
+    <color name="deleteText">#FA4F4F</color>
+</resources>

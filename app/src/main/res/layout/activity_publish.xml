@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/common_layout"
+    android:clipToPadding="true"
+    tools:context=".mvp.view.activity.PublishActivity">
+
+    <RelativeLayout
+        style="@style/common_top">
+        <TextView
+            style="@style/common_title"
+            android:text="@string/str_publish_goods" />
+        <TextView
+            style="@style/common_text"
+            android:id="@+id/goods_send"
+            android:text="@string/str_publish"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/goods_title"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:gravity="left|top"
+                android:hint="@string/str_goods_title"
+                android:background="@color/colorWhite" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorView" />
+            <EditText
+                android:id="@+id/goods_desc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:gravity="left|top"
+                android:hint="@string/str_goods_desc"
+                android:background="@color/colorWhite" />
+            <!-- verticalSpacing/horizontalSpacing：设置行列间隔 -->
+            <GridView
+                android:id="@+id/grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:verticalSpacing="2dp"
+                android:horizontalSpacing="1dp"
+                android:numColumns="5"
+                android:scrollbars="none"
+                android:background="@color/colorWhite" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorView" />
+            <EditText
+                android:id="@+id/goods_price"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:maxLines="1"
+                android:hint="@string/str_goods_price"
+                android:inputType="number"
+                android:background="@color/colorWhite" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorView" />
+            <RelativeLayout
+                android:id="@+id/goods_kind"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorWhite">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="5dp"
+                    android:gravity="center"
+                    android:text="@string/str_goods_kind"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorGray"/>
+                <ImageView
+                    android:id="@+id/goods_kind_next"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/triangle"/>
+                <TextView
+                    android:layout_toLeftOf="@id/goods_kind_next"
+                    android:id="@+id/goods_kind_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="18sp"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorView" />
+            <EditText
+                android:id="@+id/goods_condition"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:maxLines="1"
+                android:hint="@string/str_goods_condition"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:background="@color/colorWhite" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorView" />
+            <EditText
+                android:id="@+id/goods_mount"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:maxLines="1"
+                android:hint="@string/str_goods_mount"
+                android:inputType="number"
+                android:background="@color/colorWhite" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorView" />
+            <EditText
+                android:id="@+id/goods_phone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:maxLines="1"
+                android:hint="@string/str_goods_phone"
+                android:inputType="number"
+                android:background="@color/colorWhite" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorView" />
+            <TextView
+                android:id="@+id/goods_location"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:gravity="center_vertical"
+                android:hint="@string/str_goods_location"
+                android:background="@color/colorWhite" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

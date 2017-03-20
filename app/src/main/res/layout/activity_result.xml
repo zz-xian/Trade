@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_layout"
+    android:clipToPadding="true">
+
+    <RelativeLayout
+        style="@style/common_top">
+        <ImageView
+            style="@style/common_back"
+            android:id="@+id/result_back" />
+        <TextView
+            style="@style/common_title"
+            android:id="@+id/result_text"
+            android:text="@string/str_all_kind" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.xiaoxian.trade.widget.CustomListView
+            style="@style/custom_list"
+            android:id="@+id/result_list" />
+    </ScrollView>
+</LinearLayout>

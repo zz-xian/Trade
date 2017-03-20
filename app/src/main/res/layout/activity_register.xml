@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- clipToPadding：控件绘制区域是否在padding内 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/common_layout"
+    android:clipToPadding="true"
+    tools:context=".mvp.view.activity.RegisterActivity">
+
+    <RelativeLayout
+        style="@style/common_top">
+        <ImageView
+            style="@style/common_back"
+            android:id="@+id/register_back" />
+        <TextView
+            style="@style/common_title"
+            android:text="@string/str_register" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:id="@+id/register_input_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/str_input_phone"
+                android:textSize="16sp"
+                android:textColor="@drawable/text_color_selector"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:layout_gravity="center_vertical">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/ic_next"/>
+            <TextView
+                android:id="@+id/register_input_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/str_input_verify"
+                android:textSize="16sp"
+                android:textColor="@drawable/text_color_selector" />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/ic_next" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:id="@+id/register_set_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/str_set_pass"
+                android:textSize="16sp"
+                android:textColor="@drawable/text_color_selector" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/register_edit_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:elevation="2dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/colorWhite">
+        <!-- @null表示背景透明 -->
+        <EditText
+            android:id="@+id/register_edit_phone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:hint="@string/str_input_phone"
+            android:inputType="number"
+            android:background="@null"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/register_edit_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:elevation="2dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/colorWhite">
+        <EditText
+            android:id="@+id/register_edit_verify"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:hint="@string/str_input_verify"
+            android:inputType="number"
+            android:background="@null" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/register_edit_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:elevation="2dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/colorWhite">
+        <EditText
+            android:id="@+id/register_edit_user"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:hint="@string/str_input_user"
+            android:maxLength="20"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_"
+            android:background="@null" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/register_edit_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:elevation="2dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/colorWhite">
+        <EditText
+            android:id="@+id/register_edit_pass"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:inputType="textPassword"
+            android:hint="@string/str_input_pass"
+            android:background="@null" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/register_edit_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:elevation="2dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/colorWhite">
+        <EditText
+            android:id="@+id/register_confirm_pass"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:inputType="textPassword"
+            android:hint="@string/str_confirm_pass"
+            android:background="@null" />
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/register_finish"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="@string/str_get_verify"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/button_selector" />
+</LinearLayout>
